@@ -32,6 +32,10 @@ h6 {
   padding: 0;
 }
 
+.content {
+  overflow: hidden;
+}
+
 .header {
   padding-top: 60px;
   position: fixed;
@@ -1132,7 +1136,8 @@ h1 span {
   margin-right: 42px;
 }
 
-.footer__contacts span, .footer__contacts a {
+.footer__contacts span,
+.footer__contacts a {
   color: white;
   font-size: 0.875em;
   margin-left: 21px;
@@ -1140,4 +1145,435 @@ h1 span {
 
 .footer__contacts a {
   margin-left: 31px;
+}
+
+@media screen and (max-width: 1850px) {
+  .call-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .call-wrap .left,
+  .call-wrap .right,
+  .call-wrap .sales .text,
+  .call-wrap .start .text {
+    width: 100%;
+  }
+  .call-wrap .sales {
+    width: 100%;
+    height: auto;
+    padding-bottom: 70px;
+    padding-right: 211px;
+  }
+  .tariffs-list li,
+  .cases-list li {
+    width: 32%;
+  }
+  .call-wrap .start {
+    padding-right: 572px;
+    padding-bottom: 42px;
+    height: auto;
+  }
+  .call-wrap .flash {
+    width: 100%;
+    height: auto;
+  }
+  .call-wrap .growth {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .bottom {
+    background-size: 100% 100%;
+    width: 1000px;
+  }
+  .bottom li:after {
+    right: -30px;
+  }
+  .bottom li {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .first .offer {
+    width: 500px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .icon {
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+  }
+  .first__picture {
+    -webkit-transform: translate(-42%, 0);
+        -ms-transform: translate(-42%, 0);
+            transform: translate(-42%, 0);
+    width: 490px;
+  }
+  .first .bg {
+    width: 55%;
+  }
+  .first .bordered {
+    width: 320px;
+    background-size: 100% 100%;
+  }
+  .first .bordered p {
+    font-size: 25px;
+    line-height: 30px;
+    width: 200px;
+  }
+  .how-collab li {
+    width: 20% !important;
+    margin-right: 0;
+  }
+  .how-collab {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .bottom__heading {
+    position: relative;
+    top: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    right: 0;
+    width: auto;
+    margin-bottom: 50px;
+  }
+  .bottom {
+    background: none;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .tariffs__wrap {
+    background: 0;
+    height: auto;
+  }
+  .tariffs-list li,
+  .cases-list li {
+    width: 47%;
+    margin-bottom: 50px;
+  }
+  .tariffs-list li:last-child,
+  .cases-list li:last-child {
+    margin-bottom: 0;
+  }
+  .tariffs-list,
+  .cases-list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .review {
+    margin: 0;
+    width: 100%;
+  }
+  .reviews {
+    background-size: cover;
+  }
+  .quality .bordered {
+    width: 46%;
+    padding: 0;
+    background: none;
+  }
+  .quality__main {
+    width: 46%;
+  }
+  .review .review__video {
+    background-size: 100%;
+  }
+  .bottom-menu li {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .first .offer {
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .first-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .first .bg {
+    width: 100%;
+    bottom: 0;
+    height: 50%;
+    top: auto;
+  }
+  .first .bordered {
+    width: 371px;
+  }
+  .first__picture {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: auto;
+    height: 80%;
+    left: 60%;
+  }
+  .first .bordered p {
+    font-size: 2.25em;
+    line-height: 40px;
+    width: auto;
+  }
+  .about {
+    background: none;
+  }
+  .head {
+    width: 100%;
+  }
+  .bottom__heading {
+    margin-bottom: 70px;
+  }
+  .call-wrap .sales,
+  .call-wrap .growth {
+    border-radius: 0;
+  }
+  .growth img {
+    margin-top: -30px;
+  }
+  .call-wrap .start {
+    background-size: contain;
+    background-position: top right -200px;
+  }
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .quality:after {
+    width: 100%;
+    height: 50%;
+  }
+  .quality__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .quality .bordered,
+  .quality__main {
+    width: 100%;
+  }
+  .quality__main {
+    margin-top: 150px;
+  }
+  .quality h3 br {
+    display: none;
+  }
+  .first-day p {
+    width: 100%;
+  }
+  .footer {
+    padding-bottom: 50px;
+  }
+  .bottom-menu {
+    margin-bottom: 25px;
+  }
+  .call-form {
+    bottom: -190px;
+  }
+  .bottom .text {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .call-form {
+    width: 100%;
+    left: 0;
+  }
+  .how-collab li {
+    width: 48% !important;
+    margin-bottom: 50px;
+  }
+  .bottom li:after {
+    right: 20px;
+  }
+  .call {
+    padding-top: 80px;
+  }
+  .subtext {
+    font-size: 18px;
+  }
+  .tariffs-list li,
+  .cases-list li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .first__picture {
+    display: none;
+  }
+  .how-collab li {
+    text-align: center;
+    width: 100% !important;
+  }
+  .call-form .stroke {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .call-form .stroke .button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .call-form {
+    border-radius: 0;
+    height: auto;
+  }
+  .call-form .field {
+    width: 48%;
+    margin: 0;
+  }
+  .first .bordered {
+    background: 0;
+    width: auto;
+    height: auto;
+  }
+  .call-form {
+    position: relative;
+    bottom: 0;
+  }
+  .first .offer {
+    margin-bottom: 100px;
+  }
+  .first .bordered p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .first .bordered p br {
+    display: none;
+  }
+  .first .bg {
+    height: 58%;
+  }
+  .first {
+    padding-bottom: 100px;
+  }
+  .first,
+  .about {
+    padding-top: 100px;
+  }
+  .call-form h2 {
+    font-size: 16px;
+  }
+  .field {
+    height: 50px;
+  }
+  .button {
+    height: 50px;
+  }
+  .first h2 {
+    font-size: 18px;
+  }
+  .bottom .text {
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .bottom li:after {
+    top: 110%;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    left: calc(50% - 10px);
+  }
+  .bottom li {
+    margin-bottom: 60px;
+  }
+  .bottom li:last-child {
+    margin-bottom: 0;
+  }
+  .subtext {
+    padding: 0 20px;
+  }
+  .head h2,
+  .bottom__heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .head .caption {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+  .icon img {
+    width: 30px;
+    height: 30px;
+  }
+  .about .head {
+    margin-bottom: 50px;
+  }
+  .call-wrap .flash {
+    background-position: top left -50px;
+    background-size: contain;
+  }
+  .call-wrap .start {
+    padding-right: 350px;
+    background-position: center right -350px;
+  }
+  .call-wrap .growth img {
+    margin-left: -100px;
+  }
+  .tariffs {
+    padding: 70px 0px;
+  }
+  .tariffs h2 {
+    margin-bottom: 40px;
+  }
+  .cases .call-form {
+    bottom: 0;
+    margin-top: 50px;
+  }
+  .bottom .icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reviews {
+    padding-top: 70px;
+    background: 0;
+  }
+  .bottom-menu a {
+    font-size: 13px;
+  }
 }

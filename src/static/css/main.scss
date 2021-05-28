@@ -1,6 +1,7 @@
 // Global
 
 // Vars
+$xs: 575px;
 $sm: 767px;
 $md: 991px;
 $lg: 1199px;
@@ -14,6 +15,10 @@ body {
     font-size: 16px;
     color: #191a1c;
     background: #fafafa;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a,
@@ -53,6 +58,11 @@ h6 {
     top: 0;
     width: 100%;
     left: 0;
+    z-index: 100;
+
+    @media screen and (max-width: $lg) {
+        padding-top: 20px;
+    }
 }
 
 .navbar-nav {
@@ -64,7 +74,7 @@ h6 {
     padding: 0;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-xl .navbar-nav .nav-link {
     padding: 0;
 }
 
@@ -74,7 +84,22 @@ h6 {
     font-size: 0.875em;
     line-height: 1em;
     text-transform: uppercase;
+    transition: all 0.2s linear;
+
+    &:hover {
+        color: #10251b;
+    }
 }
+
+@media screen and (min-width: $lg-c) {
+    .scroll-a {
+        background: #298659;
+        padding: 30px 0;
+        box-shadow: 0px 10px 26px -7px rgba(34, 60, 80, 0.2);
+    }
+}
+
+
 
 .nav-item {
     margin-right: 38px;
@@ -88,6 +113,11 @@ h6 {
     @media screen and (min-width: $xxl) {
         max-width: 1480px;
     }
+}
+
+.navbar-toggler {
+    font-size: 30px;
+    margin-left: auto;
 }
 
 // First
@@ -1332,6 +1362,35 @@ h1 {
     .bottom .text {
         height: 60px;
     }
+
+    .navbar-collapse {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #298659;
+        z-index: 60;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-toggler {
+        z-index: 70;
+    }
+
+    .navbar-nav {
+        width: 300px;
+        margin: 0 auto !important;
+        text-align: center;
+        margin-top: 50px;
+
+        li {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+    }
 }
 
 @media screen and (max-width: $md) {
@@ -1360,6 +1419,28 @@ h1 {
     .tariffs-list li,
     .cases-list li {
         width: 100%;
+    }
+
+    .call-form .stroke {
+        justify-content: space-between;
+    }
+
+    .field {
+        width: 32%;
+    }
+
+    .call-form .button {
+        margin-left: 0;
+        width: 32%;
+    }
+
+    .call-wrap .start {
+        padding-right: 250px;
+        background-position: top right -350px;
+    }
+
+    .call-wrap .growth__wrap {
+        padding-bottom: 40px;
     }
 }
 
@@ -1464,6 +1545,7 @@ h1 {
     .bottom {
         li {
             margin-bottom: 60px;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -1541,6 +1623,275 @@ h1 {
 
     .bottom-menu a {
         font-size: 13px;
+    }
+
+    .quality h3,
+    .quality__main h2 {
+        text-align: center;
+
+        br {
+            display: none;
+        }
+    }
+
+    .call-wrap .sales,
+    .call-wrap .flash,
+    .call-wrap .start,
+    .call-wrap .growth {
+        padding: 30px;
+        background-image: none;
+    }
+
+    .call-wrap .start {
+        background: #fafafa;
+    }
+
+    .call-wrap .sales .subtitle {
+        width: 100%;
+    }
+
+    .call-wrap .growth img {
+        display: none;
+    }
+
+    .call-wrap .growth__wrap {
+        padding: 0;
+    }
+
+    .tariffs-list li:nth-child(2):after {
+        display: none;
+    }
+
+    .quality__main audio {
+        width: 300px;
+    }
+
+    .first-day li {
+        margin-bottom: 20px;
+    }
+
+    .review .play {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+    }
+
+}
+
+@media screen and (max-width: $xs) {
+    h1 {
+        font-size: 25px;
+        line-height: 30px;
+        color: white;
+
+        span {
+            color: #081911;
+        }
+    }
+
+    .first .offer h2 {
+        color: #081911;
+
+        span {
+            color: white;
+        }
+    }
+
+    .first .offer {
+        margin-bottom: 50px;
+    }
+
+    .call-form .field {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .call-form .stroke .button {
+        margin-top: 0;
+    }
+
+    .first {
+        background: #298659;
+    }
+
+    .first .bordered p {
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .call-form {
+        padding: 30px;
+    }
+
+    .first,
+    .about,
+    .tariffs,
+    .cases {
+        padding: 50px 0;
+    }
+
+    .head h2,
+    .bottom__heading,
+    .heading {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    html {
+        line-height: 14px;
+    }
+
+    .tariffs-list .stroke__right {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .tariffs-list .stroke {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tariffs-list .stroke__txt:before {
+        display: none;
+    }
+
+    .call {
+        padding-top: 25px;
+    }
+
+    .call-wrap {
+        margin-top: 25px;
+    }
+
+    .tariffs-list h3,
+    .cases-list h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .tariffs-list li,
+    .cases-list li {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .cases-list table .indicator {
+        width: 40%;
+    }
+
+    .cases-list table .after,
+    .cases-list table .before {
+        width: 30%;
+    }
+
+    .reviews {
+        padding-top: 50px 0;
+    }
+
+    .review .review__video {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .reviews__top {
+        align-items: center;
+    }
+
+    .review .review__header {
+        flex-direction: column;
+    }
+
+    .review .avatar {
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .review .leads {
+        padding: 9px;
+    }
+
+    .quality {
+        padding: 50px 0;
+    }
+
+    .quality h3,
+    .quality__main h2 {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .first-day li {
+        flex-direction: column;
+        align-items: center;
+
+        .text {
+            margin: 0;
+            margin-top: 15px;
+            text-align: center;
+        }
+    }
+
+    .quality__main {
+        margin-top: 60px;
+    }
+
+    .quality:after {
+        height: 54%;
+    }
+
+    .quality__main audio {
+        width: 280px;
+    }
+
+    .bottom-menu,
+    .footer__contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-menu li,
+    .footer__contacts .contact:first-child {
+        margin-right: 0;
+    }
+
+    .footer__contacts .contact:first-child {
+        margin-bottom: 15px;
+    }
+
+    .cases-list table thead td {
+        font-size: 12px;
+    }
+
+    .review .review__social {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+    }
+
+    .review .review__social .twitter {
+        margin-bottom: 10px;
+    }
+
+    .tariffs-list .stroke__txt {
+        text-align: center;
+    }
+
+    .first {
+        padding-top: 70px;
+    }
+
+    .tariffs-list .button {
+        width: 100%;
     }
 
 }

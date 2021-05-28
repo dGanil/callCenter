@@ -37,5 +37,23 @@ $(document).ready(function() {
         });
     }
 
+    $(window).bind('scroll', function() {
+        if ($(document).scrollTop() > ($('header').height() + 50)) {
+            $('header').addClass('scroll-a')
+
+        } else if ($(document).scrollTop() < ($('header').height() + 50)) {
+            $('header').removeClass('scroll-a')
+        }
+
+    })
+
+    $('.navbar-toggler').bind('click', function() {
+        $('.navbar-collapse').toggleClass('show')
+    }) 
+
+    $('.nav-item').bind('click', function() {
+        $('.navbar-collapse').removeClass('show')
+    })
+
 
 })
